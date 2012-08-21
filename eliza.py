@@ -83,9 +83,12 @@ gReflections = {
 #----------------------------------------------------------------------
 gPats = [
   [r'I need (.*)',
-  [  "Why do you need %1?",
-    "Would it really help you to get %1?",
-    "Are you sure you need %1?"]],
+  [  "Canada needs good strong Conservative values - like less gays, and less questioning. #CPC #CanPoli #SocCon",
+    "%1? I am tired of #NDP smear tactics! #CPC #CanPoli",
+    "Interesting you need %1! Canada is a strong nation and can provide it! #Arctic #CPC #CanPoli",
+    "I can appreciate that, when Canada needed a panda - So I was able to trade our environment and land to borrow one!",
+    "Why do you feel you need %1?",
+    "You need %1 like America needs another Hockey team!"]],
   
   [r'Why don\'?t you ([^\?]*)\??',
   [  "Do you really think I don't %1?",
