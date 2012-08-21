@@ -31,6 +31,11 @@ if __name__ == '__main__':
     if len(sys.argv) > 1:
         last_id_replied = sys.argv[1]
 
+    last_id_file = 'last_id_replied'
+    if (os.path.exists(last_id_file)):
+        last_id_replied = int(open(last_id_file).read())
+        print 'Using last id from file ', last_id_replied
+
     doctor = eliza.eliza()
 
     poster = Twitter(
@@ -60,6 +65,7 @@ if __name__ == '__main__':
             last_id_replied = id
             poster.statuses.update(status=msg)
             print 'Last id replied = ', last_id_replied
+            open(last_id_file, 'w').write(str(last_id_replied))
 
         print 'Now sleeping... \n\n'
         time.sleep(30)
