@@ -46,14 +46,14 @@ if __name__ == '__main__':
         domain='api.twitter.com')
 
     while True:
-        results = twitter.search(q="@the_shrinkbot", since_id=last_id_replied)['results']
+        results = twitter.search(q="@PMStevenHarper", since_id=last_id_replied)['results']
     
         if not results:
             print 'No results this time...'
 
         for result in results:
             # Remove my name from the question.
-            question = result['text'].replace('@the_shrinkbot', '')
+            question = result['text'].replace('@PMStevenHarper', '')
             asker = result['from_user']
             id = str(result['id'])
             print " <<< " + asker + ": " + question
